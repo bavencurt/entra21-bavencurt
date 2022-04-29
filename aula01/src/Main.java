@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     //comentário de linha/
@@ -6,17 +8,20 @@ public class Main {
     block
     block
      */
-    static int var1 = 10;
-    double var2 = 25.8;
+    int valorA = 10;
+    double valorB = 25.8;
     char var3 = 'a';
     String var4 = "criar-texto";
     boolean var5 = true;
 
     public static void main(String[] args) {
-       int var1 = 10;
-       int var2 = 10;
-        System.out.println(var1 >= var2);
-
+       int valor1 = 10;
+       int valor2 = 20;
+       int valor3 = valor1;
+       valor1 = valor2;
+       valor2 = valor3;
+       System.out.println(valor1);
+       System.out.println(valor2);
     }
 
     //private
