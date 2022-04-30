@@ -81,7 +81,7 @@ public class Exercicicos {
         double preco = in.nextDouble();
         double imp1 = 0.28 * preco;
         double imp2 = 0.45 * preco;
-        double carro = preco - imp1 - imp2;
+        double carro = preco + imp1 + imp2;
         System.out.printf("Você pagou R$%.2f pelo carro, pagou R$%.2f ao distribuidor e pagou R$%.2f de impostos", carro, imp1, imp2);
 
 
@@ -204,15 +204,50 @@ public class Exercicicos {
         int inicio = in.nextInt();
         System.out.println("Hora do final");
         int fim = in.nextInt();
-        int duracao = fim - inicio;
-        if (duracao > 0) {
-            System.out.printf("Duração da partida: %dH", duracao);
-        } else if (duracao < 0) {
-            int duracao1 = duracao * (-1);
-            System.out.printf("Duração da partida: %dH", duracao1);
+        if (fim>inicio) {
+            int duracao = fim - inicio;
+            System.out.printf("Duração da partida:%dh", duracao);
         }else{
-            System.out.println("partida inválida");
+            int duracao2 = ((inicio - 24)*-1) + fim;
+            System.out.printf("Duração da partida:%dh", duracao2);
         }
+    }
+    public static void exe18() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite as horas trabalhadas no mês:");
+        double horas = in.nextDouble();
+        System.out.println("Digite o salário por hora:");
+        double pgto = in.nextDouble();
+        if (horas <= 40) {
+            double salario = horas * pgto;
+            System.out.printf("Seu salário será:R$%.2f",salario);
+        } else {
+            double extra = (horas - 40);
+            double salario = (40 * pgto) + (extra * pgto) + (extra * pgto * 0.5);
+            System.out.printf("Seu salário será:R$%.2f", salario);
+        }
+    }
+    public static void exe19() {
+        Scanner in = new Scanner(System.in);
+        String masc = "M";
+        System.out.println("Digite o seu nome:");
+        String nome = in.nextLine();
+        System.out.println("Digite sua altura:");
+        double altura = in.nextDouble();
+        System.out.println("Digite o seu sexo M ou F:");
+        in.nextLine();
+        String sexo = in.nextLine();
+        int result = sexo.compareTo(masc);
+        if ( result == 0 ) {
+           double peso = (72.7 * altura) - 58;
+           System.out.printf("%s Seu peso ideal é:%.2f",nome,peso);
+        }else {
+            double peso = (62.1*altura) - 44.7;
+            System.out.printf("%s Seu peso ideal é:%.2f",nome,peso);
+        }
+    }
+    public static void exe20() {
+        Scanner in = new Scanner(System.in);
     }
 }
 
