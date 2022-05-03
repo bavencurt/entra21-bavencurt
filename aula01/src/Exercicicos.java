@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercicicos {
     public static void main(String[] args) {
-        exe17();
+        exe19();
     }
 
     public static void exe01() {
@@ -167,7 +167,7 @@ public class Exercicicos {
         int atual = in.nextInt();
         System.out.println("Digite o ano que você nasceu:");
         int nasc = in.nextInt();
-        if (atual - nasc < 15) {
+        if (atual - nasc < 16) {
             System.out.println("Você não poderá votar nesse ano!!");
         } else {
             System.out.println("Você poderá votar esse ano!!");
@@ -184,8 +184,8 @@ public class Exercicicos {
             System.out.println(a);
         }else {
             System.out.println(b);
+        }
     }
-}
     public static void exe16() {
         Scanner in = new Scanner(System.in);
         System.out.println("Digite um valor:");
@@ -218,12 +218,12 @@ public class Exercicicos {
         double horas = in.nextDouble();
         System.out.println("Digite o salário por hora:");
         double pgto = in.nextDouble();
-        if (horas <= 40) {
+        if (horas <= 160) {
             double salario = horas * pgto;
             System.out.printf("Seu salário será:R$%.2f",salario);
         } else {
-            double extra = (horas - 40);
-            double salario = (40 * pgto) + (extra * pgto) + (extra * pgto * 0.5);
+            double extra = (horas - 160);
+            double salario = (160 * pgto) + (extra * pgto) + (extra * pgto * 0.5);
             System.out.printf("Seu salário será:R$%.2f", salario);
         }
     }
@@ -239,8 +239,8 @@ public class Exercicicos {
         String sexo = in.nextLine();
         int result = sexo.compareTo(masc);
         if ( result == 0 ) {
-           double peso = (72.7 * altura) - 58;
-           System.out.printf("%s Seu peso ideal é:%.2f",nome,peso);
+            double peso = (72.7 * altura) - 58;
+            System.out.printf("%s Seu peso ideal é:%.2f",nome,peso);
         }else {
             double peso = (62.1*altura) - 44.7;
             System.out.printf("%s Seu peso ideal é:%.2f",nome,peso);
@@ -248,6 +248,57 @@ public class Exercicicos {
     }
     public static void exe20() {
         Scanner in = new Scanner(System.in);
+        double total = 0;
+        System.out.println("Digite o salário fixo:");
+        double salario = in.nextDouble();
+        System.out.println("Valor de vendas realizadas");
+        double vendas = in.nextDouble();
+        if (vendas >= 1500) {
+            double vendas1 = vendas - 1500;
+            total = salario + (0.03 * 1500) + (vendas1 * 0.05);
+            System.out.printf("Seu salário será: R$%.2f", total);
+        } else {
+            total = salario + (vendas * 0.03);
+            System.out.printf("Seu salário será: R$%.2f", total);
+        }
     }
+
+    public static void exe21() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite o número da conta:");
+        int conta = in.nextInt();
+        System.out.println("Digite o saldo da conta:");
+        double saldo = in.nextDouble();
+        System.out.println("Digite o seu débito:");
+        double debito = in.nextDouble();
+        System.out.println("Digite o seu crédito");
+        double credito = in.nextDouble();
+        double atual = saldo - debito + credito;
+        System.out.printf("Seu saldo atual é: R$%.2f\n", atual);
+        if (atual >= 0) {
+            System.out.println("Saldo Positivo");
+        }else {
+            System.out.println("Saldo Negativo");
+        }
+    }
+
+    public static void exe22() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Estoque atual:");
+        int atual = in.nextInt();
+        System.out.println("Estoque máximo:");
+        int max = in.nextInt();
+        System.out.println("estoque mínimo:");
+        int min = in.nextInt();
+        int media = (max + min) / 2;
+        System.out.printf("Estoque médio:%d\n", media);
+        if (atual >=media) {
+            System.out.println("Não efetuar compra!");
+        } else {
+            System.out.println("Efetuar compra!");
+                    }
+    }
+
 }
+
 
