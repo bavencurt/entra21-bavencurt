@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class codesdope {
     public static void main(String[] args) {
-        exe04();
+
+        exe09();
     }
 
     public static void exe01() {
@@ -61,4 +62,49 @@ public class codesdope {
         System.out.println("Insira uma nota:");
         int nota = 0;
     }
-}
+    public static void exe06() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite uma frase");
+        int qtde = 0;
+        String frase = in.nextLine();
+        for(int i = 0; i < frase.length(); i++) {
+            if(frase.charAt(i) == ' ') {
+                    qtde++;
+        }
+    }
+                    System.out.println("A quantidade de espaços é: "+qtde);
+    }
+    public static void exe07() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite o número de linhas:");
+        int linhas = in.nextInt();
+        System.out.println("Digite o número de colunas:");
+        int colunas = in.nextInt();
+            for (int i = 0; i < linhas; i++) {
+                for(int j = 0; j < colunas; j++){
+                    System.out.print("#");
+            }System.out.println("");
+        }
+
+    }
+        public static void exe08() {
+            int[][] m = new int[4][4];
+
+            for (int i = 0; i < m.length ; i++) {
+                for (int j = 0; j < m[i].length ; j++) {
+                    System.out.print(m[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
+        public static void exe09() {
+        Scanner in = new Scanner(System.in);
+        int soma = 0;
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Digite um número inteiro: ");
+            soma += in.nextInt();
+        }
+            System.out.println("A soma é: "+soma);
+        }
+    }
+
