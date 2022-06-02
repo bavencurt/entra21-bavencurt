@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exercicicos {
     public static void main(String[] args) {
-        exe19();
+        exe23();
     }
 
     public static void exe01() {
@@ -298,7 +298,22 @@ public class Exercicicos {
             System.out.println("Efetuar compra!");
                     }
     }
+    public static void exe23() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite uma palavra: ");
+        String palavra = in.nextLine();
+        String palavra1 =  palavra;
+        StringBuilder inverso = new StringBuilder(palavra);
+            palavra = inverso.reverse().toString();
+            if (palavra.equals(palavra1)) {
+                System.out.println("É um PALÍNDROMO!!");
+            }else {
+                System.out.println("Não é um Palíndromo!");
+            }
+        }
+    public static void exe24 () {
 
+    }
 }
 
 
