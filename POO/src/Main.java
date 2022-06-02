@@ -110,7 +110,6 @@ public class Main {
         }
         System.out.print("Informe o valor do(a) "+lanche.tipo+": R$");
         lanche.valor = in.nextDouble();
-        lanche.montarComanda();
     }
 }
 
